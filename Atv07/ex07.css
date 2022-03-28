@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2? family= Roboto & display=swap");
+
+*{
+    font-family: Roboto, sans-serif;
+    color: #333;
+}
+
+body{
+    background: #edf0f2;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2{
+    text-transform: uppercase;
+}
+
+#app {
+    padding: 25px;
+}
+
+input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #cccc;
+    border-radius: 3px;
+    width: 250px;
+}
+
+#numInicio {
+    background: #43bc70;
+    padding: 8px 12px;
+    font-size: 16px;
+    color: #fff;
+    border: 0;
+    border-radius: 3px;
+}
+
+#numFinal {
+    background: #43bc70;
+    padding: 8px 12px;
+    font-size: 16px;
+    color: #fff;
+    border: 0;
+    border-radius: 3px;
+}
+
+#zerar {
+    background: #43bc70;
+    padding: 8px 12px;
+    font-size: 16px;
+    color: #fff;
+    border: 0;
+    border-radius: 3px;
+}
+
+#btRemover {
+    background: #ff6961;
+    padding: 8px 12px;
+    font-size: 16px;
+    color: #fff;
+    border: 0;
+    border-radius: 3px;
+}
+
