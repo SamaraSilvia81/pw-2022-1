@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2? family= Roboto & display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+h1{
+    text-transform: uppercase;
+    background-color: #eee;
+    text-align: center;
+    padding: 12px;
+}
+
+p {
+    padding: 10px;
+    text-align: justify;
+    margin-left: 50px;
+}
+
+section{  /* Estilo da caixa que abriga todo o body*/
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 400px; /* Deixa mais larga ou encolhida (horizontalmente)*/
+    max-width: 90%;
+    margin-bottom: 10px;
+    padding-bottom: 20px;  /* Deixe a caixa mais esticada ou emprenssada (verticalmente)*/
+    position: relative;
+}
+
+
+input {  /* Estilo dos campos de inserção*/
+    padding: 8px;
+    border: 1px solid #cccc;
+    border-radius: 3px;
+    width: 90%;
+    display: block;
+    font-size: 14px;
+}
+
+#tabela{   /* Estilo do resultado da tabela*/
+    padding: 20px;
+    text-align: center;
+}
+
+#tb {   /* Estilo do botão criar tabela*/
+    background-color: #fc00ff;
+    border: 2px solid #fc00ff;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    width: 35%;    
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: 65px;
+}
+
+#tbRemove {   /* Estilo do botão remover*/
+    background-color: #00dbde;
+    border: 2px solid #00dbde;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    width: 35%;    
+    border-radius: 10px;
+    padding: 5px;
+    margin-right: 40px;
+}
