@@ -25,9 +25,8 @@ function gerarTabela(){
        alert("Verifique os campos preenchidos. Apenas valores válidos!!")
     } else {
         tabela.innerHTML = "";
-    }
-
-    for(let i = 1; i<=num; i++){
+        
+        for(let i = 1; i<=num; i++){
 
         inputTabela.innerHTML += Math.trunc(Math.random() * (max - min + 1) + min) + "    ";  // multiplica-se por um valor inteiro para sair do zero.
      
@@ -35,7 +34,7 @@ function gerarTabela(){
             tabela.innerHTML += "\n";   // É para ordenar os valores que estão na "tabela" do PRE.
         }
     }
-}
+  }  
 
 function remover(){
     tabela.innerHTML = " ";
