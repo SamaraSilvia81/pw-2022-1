@@ -33,7 +33,7 @@ function gerarTabela(){
             }
         }
     }
-}
+  }  
 
 function remover(){
     tabela.innerHTML = " ";
