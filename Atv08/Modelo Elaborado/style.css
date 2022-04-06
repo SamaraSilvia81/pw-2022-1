@@ -7,7 +7,7 @@
     font-family: "Poppins", sans-serif;
   }
   
-  body {
+body {
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
@@ -36,7 +36,7 @@ section{  /* Estilo da caixa que abriga todo o body*/
     width: 400px; /* Deixa mais larga ou encolhida (horizontalmente)*/
     max-width: 90%;
     margin-bottom: 10px;
-    padding-bottom: 20px;  /* Deixe a caixa mais esticada ou emprenssada (verticalmente)*/
+    padding-bottom: 20px;  /* Deixe a caixa mais esticada ou imprensada (verticalmente)*/
     position: relative;
 }
 
