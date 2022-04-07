@@ -19,16 +19,16 @@ function geraResultado(){
    let pot = A ** B;
 
    if(isNaN(A) || isNaN(B)){
-      alert("errrooo")
+      alert("Atenção aos campos preenchidos. Digite valores válidos!")
    } else{
       n1.innerHTML = "";
       n2.innerHTML = "";
 
-      resultado.innerHTML += $sum + "\n"; 
-      resultado.innerHTML += sub + "\n";
-      resultado.innerHTML += multi + "\n";
-      resultado.innerHTML += div + "\n";
-      resultado.innerHTML += pot + "\n"; 
+      resultado.innerHTML += (`Soma: ${sum} \n`); 
+      resultado.innerHTML += (`Substração: ${sub} \n`);
+      resultado.innerHTML += (`Multiplicação: ${multi} \n`);
+      resultado.innerHTML += (`Divisão: ${div} \n`);
+      resultado.innerHTML += (`Potenciação: ${pot} \n`);
    }
 }
 

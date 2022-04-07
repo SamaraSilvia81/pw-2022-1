@@ -1,0 +1,1 @@
+window.alert('É um grande prazer em te conhecer, visitante');
