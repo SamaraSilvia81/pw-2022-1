@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Fetch</title>
+    <script src="index.js" defer></script>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Fetch</h1>
+    <ol id="lista"></ol>
+    <hr />
+    <p>
+      Clique no botão para carregar a lista:
+      <button id="btFetch">Executar o Fetch</button>
+    </p>
+    <p>
+      <button id="btProxPag">Próxima Página</button>
+    </p>
+    <ol id="listaFetch"></ol>
+    <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>birth_yea</th>
+            <th>height</th>
+            <th>mass</th>
+            <th>hair_color</th>
+            <th>skin_color</th>
+            <th>eye_color</th>
+          </tr>
+        </thead>
+        <tbody id="tabela_corpo">
+        </tbody>
+      </table>
+  </body>
+</html>
