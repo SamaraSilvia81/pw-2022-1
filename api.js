@@ -1,20 +1,20 @@
-Parse.serverURL = "https://parseapi.back4app.com/classes/Pessoa"; // This is your Server URL
+Parse.serverURL = "https://parseapi.back4app.com"; // This is your Server URL
 // Remember to inform BOTH the Back4App Application ID AND the JavaScript KEY
 Parse.initialize(
   "bB2rgJBNhSnGS4PqdukhFwmHaqpElByurT3CqCb2", // This is your Application ID
-  "JLMPzZZ2pMsrsyMcIs0Sjj9mnwd0sci5G5dkCMjo" // This is your Javascript key
+  "YSCvl20VzHyh7Tqqe3Yic78swZPMWoUNIFdEd1Hf" // This is your Javascript key
 );
 
-let Pessoa = [];
+let pessoas = [];
 const lista = document.getElementById("lista");
 
 function gerarLista() {
   lista.innerHTML = "";
-  for (let i = 0; i < Pessoa.length; ++i) {
-    lista.innerHTML += `<li>${i}</li>`;
+  for (let i = 0; i < pessoas.length; ++i) {
+    //lista.innerHTML += `<li>${i}</li>`;
     const li = document.createElement("li");
     const txt = document.createTextNode(
-      `Nome: ${Pessoa[i].nome} - Idade: ${Pessoa[i].idade}`
+      `Nome: ${pessoas[i].Nome} - Idade: ${pessoas[i].Idade}`
     );
     li.appendChild(txt);
     lista.appendChild(li);
@@ -22,11 +22,11 @@ function gerarLista() {
 }
 
 const fetchPessoas = async () => {
-  const Biografia = Parse.Object.extend("Biografia");
-  const query = new Parse.Query(Biografia);
+  const Pessoa = Parse.Object.extend("Pessoa");
+  const query = new Parse.Query(Pessoa);
   try {
     const results = await query.find();
-    Pessoa = [];
+    pessoas = [];
     for (const object of results) {
       const Nome = object.get('Nome')
       const Idade = object.get('Idade')
@@ -45,11 +45,11 @@ const fetchPessoas = async () => {
       console.log(Peso);
       console.log(Poderes);
       Cor_Dos_Olhos,Cor_Do_Cabelo,Genero,Peso,Poderes*/
-      Pessoa.push({Nome, Idade});
+      pessoas.push({Nome, Idade});
     }
     gerarLista();
   } catch (error) {
-    console.error("Error while fetching Pessoa", error);
+    console.log("Error while fetching Pessoa", error);
   }
 };
 
