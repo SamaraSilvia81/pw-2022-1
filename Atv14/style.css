@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+  }
+  
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #252525 0%, #d35862 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+h1{
+    text-transform: uppercase;
+    background-color: #eee;
+    text-align: center;
+    padding: 12px;
+}
+
+p {
+    padding: 10px;
+    text-align: justify;
+}
+
+pre{  /* Estilo do resultado da API*/
+    padding: 8px;
+    font-size: 14px;
+    text-align:justify;
+
+}
+
+section{  /* Estilo da caixa que abriga todo o body*/
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 1500px; /* Deixa mais larga ou encolhida (horizontalmente)*/
+    max-width: 80%;
+    margin-bottom: 10px;
+    padding-bottom: 30px;  /* Deixe a caixa mais esticada ou imprensada (verticalmente)*/
+    position: relative;
+}
+
+
+input {  /* Estilo dos campos de inserção*/
+    background-color: #fff;
+    border: 2px outset #d35862;
+    text-align: center;
+    font-size: 14px;
+    width: 13%;    
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: 1px;
+}
+
+#btApi, #btApi2 {   /* Estilo do botão criar tabela*/
+    background-color: #252525;
+    border: 2px solid #252525;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    width: 25%;    
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: 270px;
+}
+
+#btRemove {   /* Estilo do botão remover*/
+    background-color: #d35862;
+    border: 2px solid #d35862;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    width: 25%;    
+    border-radius: 10px;
+    padding: 5px;
+}
