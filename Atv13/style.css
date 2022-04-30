@@ -56,7 +56,7 @@ input {  /* Estilo dos campos de inserção*/
     margin-left: 1px;
 }
 
-#btApi, #btApi2 {   /* Estilo do botão criar tabela*/
+#btApi {   /* Estilo do botão criar tabela*/
     background-color: #252525;
     border: 2px solid #252525;
     color: #fff;
@@ -68,6 +68,35 @@ input {  /* Estilo dos campos de inserção*/
     margin-left: 270px;
 }
 
+/* rgb(83, 228, 184); verde-agua*/
+/* rgb(83, 194, 228);* azul bebê*/
+
+#btApi2 {   /* Estilo do botão criar tabela*/
+    background-color: #252525;
+    border: 2px solid #252525;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    width: 15%;    
+    border-radius: 10px;
+    padding: 5px;
+    margin-right: 100px;
+    margin-left: 150px ;
+}
+
+#btApi3 {   /* Estilo do botão criar tabela*/
+    background-color: #252525;
+    border: 2px solid #252525;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    width: 15%;    
+    border-radius: 10px;
+    padding: 5px;
+    margin-right: 100px;
+    margin-left: 20px;
+}
+
 #btRemove {   /* Estilo do botão remover*/
     background-color: #d35862;
     border: 2px solid #d35862;
@@ -77,4 +106,17 @@ input {  /* Estilo dos campos de inserção*/
     width: 25%;    
     border-radius: 10px;
     padding: 5px;
+}
+
+#btLimpa {   /* Estilo do botão remover*/
+    background-color: #d35862;
+    border: 2px solid #d35862;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    width: 15%;    
+    border-radius: 10px; 
+    padding: 5px;
+    margin-left: 20px;
+    margin-right: 40px;
 }

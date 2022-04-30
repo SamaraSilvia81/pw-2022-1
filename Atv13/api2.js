@@ -5,13 +5,10 @@ Parse.initialize(
   "0462wRsuzQ4tz7FtX8Jtaaphvn52AU3oiLQqEGdz" // This is your Javascript key
 );
 
-// Variáveis Principais
-
 let biografia = [];
 
 const lista = document.getElementById("lista");
-const btApi = document.getElementById("btApi");
-const btNovaApi = document.getElementById("btApi2");
+const btNovaApi = document.getElementById("btApi3");
 
 // Funções feitas
 
@@ -27,7 +24,7 @@ function gerarLista() {
   }
 }
 
-const fetchBiografia = async () => {
+const fetchNovaBiografia = async () => {
   const Biografia = Parse.Object.extend("Biografia");
   const query = new Parse.Query(Biografia);
   try {
@@ -56,28 +53,9 @@ const fetchBiografia = async () => {
   }
 };
 
-
-const fetchApi2 = async () => {
-    const myNewObject = new Parse.Object('Biografia');
-    myNewObject.set('Nome', 'lorie');
-    myNewObject.set('Idade', 2000);
-    myNewObject.set('Altura', '1.34');
-    myNewObject.set('Cor_Dos_Olhos', 'branco');
-    myNewObject.set('Cor_Do_Cabelo', 'azul');
-    myNewObject.set('Genero', 'feminino');
-    myNewObject.set('Peso', '345.76');
-  try {
-    const result = await myNewObject.save();
-    // Access the Parse Object attributes using the .GET method
-    console.log('Biografia created', result);
-  } catch (error) {
-    console.error('Error while creating Biografia: ', error);
-  }
-}; 
-
 function remover(){
   lista.innerHTML = " ";
 }
 
-btApi.onclick = fetchBiografia;
-btRemove.onclick = remover;
+btNovaApi.onclick = fetchNovaBiografia;
+btLimpa.onclick = remover;
