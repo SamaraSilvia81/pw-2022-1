@@ -78,7 +78,7 @@ const atualizarTarefa = async () => {
   tarefas = [];
   try {
     // here you put the objectId that you want to update
-    const object = await query.get('Tarefa');
+    const object = await query.get('Descricao');
     object.set('Concluido', true);
     try {
       const response = await object.save();
