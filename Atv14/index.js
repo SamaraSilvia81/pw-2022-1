@@ -47,7 +47,6 @@ function gerarLista() {
 }
 
 const exibirTarefa = async () => {
-
   const Tarefa = Parse.Object.extend('Tarefa');
   const query = new Parse.Query(Tarefa);
   try {
@@ -73,21 +72,15 @@ const criarTarefa = async () => {
   }
 };
 
-const atualizarTarefa = async (evt, tarefa) => {
-  tarefa.set('Concluido', evt.target.checked);
+const atualizarTarefa = async (evt,tarefa) => {
+  tarefa.set('Concluido',evt.target.checked);
     try {
       const response = await tarefa.save();
       console.log(response.get('Concluido'));
-      console.log('Tarefa updated', response)
+      console.log('Tarefa updated', response);
     } catch (error) {
       console.error('Error while updating Tarefa', error);
       }
-
-      if(evt,tarefa){
-        classList.add('line-throught')
-      }
-    
-    
 };
 
 const removerTarefa = async (evt, tarefa) => {
