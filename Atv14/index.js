@@ -13,26 +13,33 @@ let tarefas = [];
 
 function gerarLista() {
 
-  div.innerHTML = " ";
+  div.innerHTML = "";
+  input.value = "";
 
   for(let i = 0; i<tarefas.length; i++){
 
     const li = document.createElement("li");
-
+    li.value = "class", "li";
+    
     const txt = document.createTextNode(
-      `${tarefas[i].Descricao}`
+      `${tarefas[i].get("Descricao")}`
     );
   
     const check = document.createElement("input");
     check.type = "checkbox";
-    check.setAttribute("id", "check"); 
+    check.value = "class", "check";
+    check.checked = tarefas[i].get("Concluido");
+
+    check.onclick = (evt) => atualizarTarefa(evt, tarefas[i]);
 
     const remove = document.createElement("button");
+    remove.value = "class", "remove";
     remove.innerHTML = 'Remover';
-    remove.setAttribute("id", "btRemove"); 
+    
+    remove.onclick = (evt) => removerTarefa(evt, tarefas[i]);
 
-    li.appendChild(txt);
     div.appendChild(li);
+    li.appendChild(txt);
     li.appendChild(check);
     li.appendChild(remove);
     
@@ -43,17 +50,10 @@ const exibirTarefa = async () => {
 
   const Tarefa = Parse.Object.extend('Tarefa');
   const query = new Parse.Query(Tarefa);
-  tarefas = [];
   try {
     const results = await query.find();
-    for (const object of results) {
-      const Descricao = object.get('Descricao')
-      const Concluido = object.get('Concluido')
-      console.log(Descricao);
-      console.log(Concluido);
-      tarefas.push({Descricao, Concluido});
-      gerarLista();
-    }
+    tarefas = results;
+    gerarLista();
   } catch (error) {
     console.error('Error while fetching Tarefa', error);
   }
@@ -67,36 +67,46 @@ const criarTarefa = async () => {
   try {
     const result = await myNewObject.save();
     console.log('Tarefa created', result);
-    exibirLista();
+    exibirTarefa();
   } catch (error) {
     console.error('Error while creating Tarefa: ', error);
   }
 };
 
-const atualizarTarefa = async () => {
-  const query = new Parse.Query('Tarefa');
-  tarefas = [];
-  try {
-    // here you put the objectId that you want to update
-    const object = await query.get('Tarefa');
-    object.set('Concluido', true);
+const atualizarTarefa = async (evt, tarefa) => {
+  tarefa.set('Concluido', evt.target.checked);
     try {
-      const response = await object.save();
+      const response = await tarefa.save();
       console.log(response.get('Concluido'));
-      console.log('Tarefa updated', response);
+      console.log('Tarefa updated', response)
     } catch (error) {
       console.error('Error while updating Tarefa', error);
       }
+
+      if(evt,tarefa){
+        classList.add('line-throught')
+      }
+    
+    
+};
+
+const removerTarefa = async (evt, tarefa) => {
+  tarefa.set('Concluido', evt.target.remove);
+    try {
+      const response = await tarefa.destroy();
+      console.log(response.get('Concluido'));
+      console.log('Deleted ParseObject', response);
+      exibirTarefa();
     } catch (error) {
-      console.error('Error while retrieving object Tarefa', error);
+      console.error('Error while deleting ParseObject', error);
     }
 };
 
 botao.onclick = criarTarefa;
 exibirTarefa();
 gerarLista();
-
-if(check.checked = true){
-  atualizarTarefa();
-  console.log(atualizarTarefa());
-}
+atualizarTarefa();
+removerTarefa();
+//document.getElementById('entrada').addEventListener('keypress', criarTarefa);
+console.log(atualizarTarefa());
+console.log(removerTarefa());

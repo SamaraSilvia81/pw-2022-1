@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2? family= Roboto & display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  
+nav {
+    font-family: system-ui, -apple-system, Arial, Helvetica, sans-serif;
+ }
+
+h1{
+     color: #fff;
+     margin-left: 90px;
+     padding-top: 40px;
+     padding-bottom: 40px;
+}
+
+p {
+    padding-top: 20px;
+    text-align: justify;
+    margin-left: 50px;
+}
+
+#entrada{
+    width: 70%;
+    height: 45px;
+    font-size: 15px;
+    border: 2px solid #cccc;
+    padding:12px;
+    color: black;
+    font-weight: 500;
+    position: relative;
+}
+
+#btEntrada{
+    float: right;
+    width: 20%;
+    height: 45px;
+    background-color: #c249c4;
+    border: 2px solid #c249c4;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+}
+
+div{
+    list-style: none;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.container2{  /* Estilo da caixa que abriga todo o body*/
+    border: 2px solid white;
+    width: 40%;
+    min-width: 450px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top:50%;
+    left: 50%;
+    padding: 30px 40px;
+}
+
+.container{
+    background-color: #ffffff !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.container3{
+    background-color: #ffffff;
+    height: 50px;
+    padding: 5px 10px;
+    padding-top: 20px;
+    padding-bottom: 200px;
+    margin-top: 40px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #ffff;
+    cursor: pointer;
+}
+
+button{
+    background-color: white;
+    border: 2px solid white;
+    color: #00dbde;
+    text-align: center;
+    font-size: 14px;
+    width: 20%;
+    height: 30px;
+    border-radius: 10px;
+    padding: 5px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+input{
+    width: 10%;
+    height: 15px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+}
+ 
