@@ -12,54 +12,64 @@ nav {
     font-family: system-ui, -apple-system, Arial, Helvetica, sans-serif;
  }
 
-h1{
+h2{
      color: #fff;
      margin-left: 90px;
      padding-top: 40px;
      padding-bottom: 40px;
+     font-size: 40px;
 }
 
 p {
     padding-top: 20px;
     text-align: justify;
-    margin-left: 50px;
+    margin-left: 5px;
+}
+
+.overflow-auto{
+    color: #7747e7;
 }
 
 #entrada{
-    width: 70%;
+    width: 78%;
     height: 45px;
     font-size: 15px;
     border: 2px solid #cccc;
-    padding:12px;
     color: black;
     font-weight: 500;
-    position: relative;
 }
 
 #btEntrada{
+    background-color: #7747e7;
+    border: 2px solid #7747e7;
     float: right;
-    width: 20%;
-    height: 45px;
-    background-color: #c249c4;
-    border: 2px solid #c249c4;
+    margin-left: 20px;
+    margin-right: 22px;
+    margin-top: 2px;
+    width: 40px;
+    height: 40px;
+    padding-top: 4px;
     color: #fff;
     text-align: center;
-    font-size: 14px;
+    font-size: 22px;
     border-radius: 5px;
     border: none;
+    border-radius: 100px;
 }
 
 div{
     list-style: none;
     padding-left: 20px;
-    padding-right: 20px;
 }
 
+.risco{
+    text-decoration: line-through;
+}
 
 .container2{  /* Estilo da caixa que abriga todo o body*/
     border: 2px solid white;
-    width: 40%;
-    min-width: 450px;
+    width: 35%;
+    min-width: 550px;
     position: absolute;
     transform: translate(-50%,-50%);
     top:50%;
@@ -68,7 +78,7 @@ div{
 }
 
 .container{
-    background-color: #ffffff !important;
+    background-color: #ffff !important;
     padding: 10px 20px;
     border-radius: 5px;
     box-shadow: 0 15px 30px rgba(0,0,0,0.3);
@@ -80,27 +90,27 @@ div{
     height: 50px;
     padding: 5px 10px;
     padding-top: 20px;
-    padding-bottom: 200px;
+    padding-bottom:190px;  /*190*/
     margin-top: 40px;
     border-radius: 10px;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 2px solid #ffff;
+    border-bottom: 2px #ffff;
     cursor: pointer;
+    overflow-y: scroll;
 }
 
 button{
-    background-color: white;
-    border: 2px solid white;
-    color: #00dbde;
+    background-color: #fff;
+    color: #7747e7;
+    text-align: right;
     text-align: center;
-    font-size: 14px;
-    width: 20%;
-    height: 30px;
-    border-radius: 10px;
-    padding: 5px;
-    text-transform: uppercase;
-    font-weight: 500;
+    width: 30px;
+    height: 10%;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 300px;
+    margin-bottom: 15px;
 }
 
 input{
@@ -108,11 +118,15 @@ input{
     height: 15px;
     border-radius: 10px;
     padding: 5px;
+    margin-right: 5px;
+    cursor: pointer;
 }
 
 body {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+    background: linear-gradient(150deg, #00dbde 20%, #7747e7 100% );
 }
+
+ /* #00ff80*/
  

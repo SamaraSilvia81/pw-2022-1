@@ -24,23 +24,27 @@ function gerarLista() {
     const txt = document.createTextNode(
       `${tarefas[i].get("Descricao")}`
     );
+
+    const div2 = document.createElement("div");
+    div2.value = "class", "div2";
   
     const check = document.createElement("input");
     check.type = "checkbox";
     check.value = "class", "check";
     check.checked = tarefas[i].get("Concluido");
 
-    check.onclick = (evt) => atualizarTarefa(evt, tarefas[i]);
+    check.onclick = (evt) => atualizarTarefa(evt, tarefas[i], div2);
 
     const remove = document.createElement("button");
     remove.value = "class", "remove";
-    remove.innerHTML = 'Remover';
+    remove.innerHTML = 'remover';
     
     remove.onclick = (evt) => removerTarefa(evt, tarefas[i]);
 
     div.appendChild(li);
-    li.appendChild(txt);
     li.appendChild(check);
+    div2.appendChild(txt); 
+    li.appendChild(div2);
     li.appendChild(remove);
     
   }
@@ -72,8 +76,15 @@ const criarTarefa = async () => {
   }
 };
 
-const atualizarTarefa = async (evt,tarefa) => {
+const atualizarTarefa = async (evt,tarefa,div2) => {
   tarefa.set('Concluido',evt.target.checked);
+
+    if(evt.target.checked){
+      div2.className = "risco";
+    } else{
+      div2.className = "semRisco"
+    }
+
     try {
       const response = await tarefa.save();
       console.log(response.get('Concluido'));
